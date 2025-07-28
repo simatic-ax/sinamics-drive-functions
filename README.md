@@ -1,15 +1,10 @@
-# @simatic-ax/sinamics-drive-functions
+# Simatic.Ax.Sinamics
 
-## Description
-
-*please insert a description of the library*
+This package contains functionality for handling drive functions such as moving an axis with a given speed or to a target position (EPOS).
 
 ## Getting started
 
 Install with Apax:
-
-> If not yet done login to the GitHub registry first.
-> More information you'll find [here](https://github.com/simatic-ax/.github/blob/main/docs/personalaccesstoken.md)
 
 ```cli
 apax add @simatic-ax/sinamics-drive-functions
@@ -18,69 +13,24 @@ apax add @simatic-ax/sinamics-drive-functions
 Add the namespace in your ST code:
 
 ```iec-st
-Using sinamics-drive-functions;
+USING Simatic.Ax.Sinamics
 ```
 
-## Library functionality
+## Functions
 
-| Classes | Description         |
-|---------|---------------------|
-| *xyz*     | *description for xyz* |
+| Function Blocks                             | Description                                                            |
+| ------------------------------------------- | ---------------------------------------------------------------------- |
+| [SinaSpeed](./docs/function_blocks/sinaspeed.md) | Moves an axis with a given speed via telegram 1                        |
+| [SinaPos](./docs/function_blocks/sinapos.md)     | Controls an axis via the basic positioner technology from SINAMICS S/G |
 
-| Functions   | Description             |
-|-------------|-------------------------|
-| *xyz*       | *description for *xyz** |
+Please refer to the documentation from SIOS [Blocks for activating SINAMICS drive functions with SIMATIC S7-1200/1500](https://support.industry.siemens.com/cs/ar/en/view/109475044), for further information about description and functionality of these blocks. Additionally for the drive functions and used telegrams also refer to the respective manual for each drive system [Landing page for SINAMICS drive functions](https://support.industry.siemens.com/cs/do/en/view/109781535).
 
-| Function Blocks | Description           |
-|-----------------|-----------------------|
-| *xyz*           | *description for xyz* |
+## Additional information
 
-## Folder structure
-```bash
-sinamics-drive-functions
-    |
-    +- .github
-    |   |  # GitHub workflows for maintaining the library
-    |   |- package-development-workflow.yml
-    |   |- package-release-workflow.yml
-    |
-    +- docs
-    |   | # the place for additional user-documentation
-    |   |- MyClass.md
-    |    
-    +- snippets
-    |    | # may contain helpful snippets for using the library
-    |    |- namespacesupport.json
-    |    |- usingNamespace.json
-    |
-    +- src
-    |   | # adjust and add library src files here
-    |   |- myClass.st
-    |
-    +- test
-    |   | # adjust and add test-programs here
-    |   |- dummy.st
-    |
-    | # additional meta-information for GitHub/-workflows
-    |- .gitattributes
-    |- .gitignore
-    |
-    | # settings file for activating the renovate-bot
-    |- renovate.json
-    |
-    | # adjust the project description file / add apax-scripts
-    |- apax.yml
-    |
-    | # essential git project files, pls. adjust
-    |- CODEOWNERS
-    |- README.md
-    |- LICENSE.md #do not change!
-```
-
-## Contribution
-
-Thanks for your interest in contributing. Anybody is free to report bugs, unclear documentation, and other problems regarding this repository in the Issues section or, even better, is free to propose any changes to this repository using a pull request.
-
-## License and Legal information
-
-Please read the [Legal information](LICENSE.md)
+> NOTE
+>
+> No implementation for target `llvm` are provided, ensure that all necessary functionality is mocked in unit tests.
+<!-- -->
+> NOTE
+>
+> This implementation of SinaSpeed and SinaPos for SIMATIC AX has been only validated on a SINAMICS S120 drive system. Other SINAMICS drive system from the G and S series have not been tested, but should be compatible in general.
