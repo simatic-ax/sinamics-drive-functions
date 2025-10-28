@@ -1,4 +1,4 @@
-# Simatic.Ax.Sinamics
+# SINAMICS Drive Functions
 
 This package contains functionality for handling drive functions such as moving an axis with a given speed or to a target position (EPOS). Furthermore, function blocks for reading or writing parameters from/to a SINAMICS device are implemented.
 
