@@ -1,6 +1,6 @@
 USING AxUnit.Assert;
 
-NAMESPACE Simatic.Ax.sinamics-drive-functions.Tests
+NAMESPACE Simatic.Ax.Sinamics.Tests
     {TestFixture}
     CLASS MyTestFixture
         {Test}
