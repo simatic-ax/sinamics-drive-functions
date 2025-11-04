@@ -6,7 +6,7 @@ You use the function block `SinaPos` to control the axis via basic positioner te
 
 | Name                  | Section | Type                   | Description                                                                                                                 |
 | --------------------- | ------- | ---------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| mode                  | Input   | `SinaPosMode`          | Operating mode selection for MDI, see [SinaPosMode](../types/sinapos.md.md#sinaposmode) for further details                 |
+| mode                  | Input   | `SinaPosMode`          | Operating mode selection for MDI, see [SinaPosMode](../types/sinapos.md#sinaposmode) for further details                 |
 | enableAxis            | Input   | `BOOL`                 | TRUE = enable axis, FALSE = switch off drive (OFF1)                                                                         |
 | acknowledgeError      | Input   | `BOOL`                 | Acknowledge drive errors with rising edge                                                                                   |
 | cancelTraversing      | Input   | `BOOL`                 | FALSE = Rejects the active traversing job                                                                                   |

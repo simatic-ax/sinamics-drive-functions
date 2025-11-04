@@ -15,7 +15,7 @@ You use the function block `SinaSpeed` to cyclically control the speed of an axi
 | hwidZSW          | Input   | `UINT`                   | Hardware ID of the SIMATIC S7-1200/1500 actual value slot                                                                    |
 | axisEnabled      | Output  | `BOOL`                   | TRUE = axis is enabled                                                                                                       |
 | lockout          | Output  | `BOOL`                   | TRUE = switch-on inhibited                                                                                                   |
-| actualVeloctiy   | Output  | `REAL`                   | Actual veloctiy in rpm                                                                                                       |
+| actualSpeed      | Output  | `REAL`                   | Actual speed in rpm                                                                                                       |
 | ZSW1             | Output  | `SinaSpeedZSW1`          | Status of ZSW1, see [SinaSpeedZSW1](../types/sinaspeed.md#sinaspeedzsw1)                                                     |
 | error            | Output  | `BOOL`                   | TRUE = fault in function block present                                                                                       |
 | status           | Output  | `SinaSpeedStatus`        | Status of the function block, see [SinaSpeedStatus](../types/sinaspeed.md#sinaspeedstatus) for further details               |

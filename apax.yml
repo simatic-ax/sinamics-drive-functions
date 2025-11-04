@@ -1,6 +1,6 @@
 # General information
-name: "sinamics-drive-functions"
-version: 1.0.0
+name: "@simatic-ax/sinamics-drive-functions"
+version: 1.1.0
 author: Siemens AG
 
 # Description will be displayed in the apax extension
@@ -34,7 +34,8 @@ publicKeys:
 
 # Dependencies
 dependencies:
-  "@ax/simatic-1500-distributedio": 10.0.1
+  "@ax/simatic-1500-distributedio": ^10.0.1
+  "@ax/system-serde": ^10.0.24
 
 devDependencies:
   '@ax/sdk': ^2504.0.0
