@@ -1,14 +1,14 @@
 {
   "name": "@simatic-ax/sinamics-drive-functions",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "lockFileVersion": "2",
   "installStrategy": "strict",
   "root": {
     "name": "@simatic-ax/sinamics-drive-functions",
-    "version": "1.1.0",
+    "version": "2.0.0",
     "dependencies": {
-      "@ax/simatic-1500-distributedio": "^10.0.1",
-      "@ax/system-serde": "^10.0.24"
+      "@ax/simatic-distributedio": "^11.0.14",
+      "@ax/system-serde": "^10.2.7"
     },
     "devDependencies": {
       "@ax/sdk": "^2510.0.0"
@@ -406,11 +406,11 @@
         "@ax/trace": "3.1.0"
       }
     },
-    "@ax/simatic-1500-distributedio": {
-      "name": "@ax/simatic-1500-distributedio",
-      "version": "10.0.3",
-      "integrity": "sha512-hqdBMPUAC3/YYVLKbw9VBPEJOBlmjB9NudoimrACISVV5bmzVBCi12Z16H+Q22VogpwN+cc/0pDRd/1AtmxcDw==",
-      "resolved": "https://registry.simatic-ax.siemens.io/@ax/simatic-1500-distributedio/-/simatic-1500-distributedio-10.0.3.tgz",
+    "@ax/simatic-distributedio": {
+      "name": "@ax/simatic-distributedio",
+      "version": "11.0.14",
+      "integrity": "sha512-H5PKBNfBwP/lWcTB1w/FBxMggHplVNfPkzUOyN5MBHe+0ehbyNX78SPUXC1cp9rqbgY9oWRvP0SCzGtm0FR0Qw==",
+      "resolved": "https://registry.simatic-ax.siemens.io/@ax/simatic-distributedio/-/simatic-distributedio-11.0.14.tgz",
       "dependencies": {}
     },
     "@ax/simatic-package-tool": {

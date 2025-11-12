@@ -1,16 +1,18 @@
 # General information
 name: "@simatic-ax/sinamics-drive-functions"
-version: 1.1.0
+version: 2.0.0
 author: Siemens AG
 
 # Description will be displayed in the apax extension
-description: This library contains several implementations of drive functions (SINA_POS, SINA_SPEED) known from TIAP.
+description: This library contains several implementations of drive functions (SINA_POS, SINA_SPEED, SINA_PARA, SINA_PARA_S) known from TIAP.
 type: lib
 
 keywords:
   - SINAMICS
   - SINA_SPEED
   - SINA_POS
+  - SINA_PARA
+  - SINA_PARA_S
 
 #URL to the repository
 repository:
@@ -34,11 +36,11 @@ publicKeys:
 
 # Dependencies
 dependencies:
-  "@ax/simatic-1500-distributedio": ^10.0.1
-  "@ax/system-serde": ^10.0.24
+  "@ax/simatic-distributedio": ^11.0.14
+  "@ax/system-serde": ^10.2.7
 
 devDependencies:
-  '@ax/sdk': ^2510.0.0
+  "@ax/sdk": ^2510.0.0
 
 # Project variables
 variables:

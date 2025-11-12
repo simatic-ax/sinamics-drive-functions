@@ -6,6 +6,9 @@ This package contains functionality for handling drive functions such as moving 
 
 Install with Apax:
 
+> If not yet done login to the GitHub registry first.
+> More information you'll find [here](https://github.com/simatic-ax/.github/blob/main/docs/personalaccesstoken.md)
+
 ```cli
 apax add @simatic-ax/sinamics-drive-functions
 ```
