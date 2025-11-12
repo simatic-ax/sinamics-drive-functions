@@ -38,7 +38,7 @@ dependencies:
   "@ax/system-serde": ^10.0.24
 
 devDependencies:
-  '@ax/sdk': ^2504.0.0
+  '@ax/sdk': ^2510.0.0
 
 # Project variables
 variables:
@@ -54,4 +54,4 @@ files:
 
 # Catalog to be intalled
 catalogs:
-  "@ax/simatic-ax": ^2504.0.0
+  "@ax/simatic-ax": ^2510.0.0
