@@ -1,11 +1,9 @@
 # General information
 name: "@simatic-ax/sinamics-drive-functions"
-version: 2.0.0
-author: Siemens AG
-
-# Description will be displayed in the apax extension
-description: This library contains several implementations of drive functions (SINA_POS, SINA_SPEED, SINA_PARA, SINA_PARA_S) known from TIAP.
+version: 0.0.0-placeholder
 type: lib
+# Description will be displayed in the apax extension
+description: This library contains several implementations of drive functions (SINA_POS, SINA_SPEED, SINA_PARA, SINA_PARA_S, SINA_INFEED) known from TIAP.
 
 keywords:
   - SINAMICS
@@ -13,47 +11,50 @@ keywords:
   - SINA_POS
   - SINA_PARA
   - SINA_PARA_S
+  - SINA_INFEED
 
 #URL to the repository
 repository:
   type: git
   url: https://github.com/simatic-ax/sinamics-drive-functions
 
-# Targets which will be compiled with 'apax build'
-targets:
-  - "1500"
-  - "llvm"
-
-# Registry information, to other npm-registries where Apax packages are located
-# '@scope': 'registry-url'
 registries:
   '@simatic-ax': 'https://npm.pkg.github.com/'
 
-# The public key to verify dependencies coming from the GitHub community. This ensures, that the package is
+# The public key(s) to verify dependencies. This ensures, that the package is
 # not tampered with.
 publicKeys:
-  "@simatic-ax": "3792a7e926775425ccdd29ceed8c368c3008b5b33d7d5550b3cb1f58093e1dff"
+  "@simatic-ax":
+    "v1": "3792a7e926775425ccdd29ceed8c368c3008b5b33d7d5550b3cb1f58093e1dff"
+    "v2": "7af3e394eb2b285a3d99ab8e1f745cc6db75704b30a80393339c721a92ffffd9"
+
+# Targets to be compiled with 'apax build'
+targets:
+  - "1500"
+  - llvm
+
+# Catalog:
+catalogs:
+  "@ax/simatic-ax": ^2510.0.0
 
 # Dependencies
-dependencies:
-  "@ax/simatic-distributedio": ^11.0.14
-  "@ax/system-serde": ^10.2.7
-
 devDependencies:
   "@ax/sdk": ^2510.0.0
+  "@simatic-ax/snippetscollection": ^1.1.0
 
-# Project variables
+
+dependencies:
+  "@ax/simatic-distributedio": ^11.0.14
+  "@ax/system-serde": ^10.3.25
+
+# Environment variables
 variables:
   APAX_BUILD_ARGS:
-    - '--debug'
+    - "--debug" # Generate debug information for target "1500"
 
 # Files, which will be shipped with the library
 files:
   - 'README.md'
   - 'LICENSE.md'
-  - 'docs'
-  - 'bin'
-
-# Catalog to be intalled
-catalogs:
-  "@ax/simatic-ax": ^2510.0.0
+  - bin
+  - docs
