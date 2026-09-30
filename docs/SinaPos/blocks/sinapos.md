@@ -50,7 +50,7 @@ You use the function block `SinaPos` to control the axis via basic positioner te
 | actualWarning | `WORD` | Current alarm number |
 | actualFault | `WORD` | Current fault number |
 | error | `BOOL` | TRUE = fault in function block present |
-| status | [`SinaPosStatus`](../enums/SinaPosStatus.md) | Status of the function block |
+| status | `WORD` | Status of the function block (values: see [`SinaPosStatus`](../enums/SinaPosStatus.md)) |
 | diagnosticsId | `WORD` | Return values of communication errors (ReadData and WriteData) |
 
 ## Example
