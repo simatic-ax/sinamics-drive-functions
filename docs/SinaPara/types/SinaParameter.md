@@ -1,4 +1,4 @@
-# SinaParameter
+# typeSinaParameter
 
 ## Description
 

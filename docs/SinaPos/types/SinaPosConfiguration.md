@@ -1,5 +1,5 @@
 
-# SinaPosConfiguration
+# typeSinaPosConfiguration
 
 ## Description
 

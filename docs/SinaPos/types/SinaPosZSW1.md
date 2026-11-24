@@ -1,4 +1,4 @@
-# SinaPosZSW1
+# typeSinaPosZSW1
 
 ## Description
 

@@ -1,4 +1,4 @@
-# SinaSpeedZSW1
+# typeSinaSpeedZSW1
 
 ## Description
 

@@ -14,7 +14,7 @@ You can use the function block `SinaSpeed` to cyclically control the speed of an
 | acknowledgeError | `BOOL` | Acknowledge drive errors with rising edge |
 | speedSetpoint | `REAL` | Speed setpoint in rpm |
 | referenceSpeed | `REAL` | Reference speed in rpm |
-| config | [`SinaSpeedConfiguration`](../types/SinaSpeedConfiguration.md#structure) | Configuration for axis |
+| config | [`typeSinaSpeedConfiguration`](../types/SinaSpeedConfiguration.md#structure) | Configuration for axis |
 | hwidSTW | `UINT` | Hardware ID of the SIMATIC S7-1200/1500 setpoint slot |
 | hwidZSW | `UINT` | Hardware ID of the SIMATIC S7-1200/1500 actual value slot |
 
@@ -25,7 +25,7 @@ You can use the function block `SinaSpeed` to cyclically control the speed of an
 | axisEnabled | `BOOL` | TRUE = axis is enabled |
 | lockout | `BOOL` | TRUE = switch-on inhibited |
 | actualSpeed | `REAL` | Actual speed in rpm |
-| ZSW1 | [`SinaSpeedZSW1`](../types/SinaSpeedZSW1.md#structure) | Status of ZSW1 |
+| ZSW1 | [`typeSinaSpeedZSW1`](../types/SinaSpeedZSW1.md#structure) | Status of ZSW1 |
 | error | `BOOL` | TRUE = fault in function block present |
 | status | [`SinaSpeedStatus`](../enums/SinaSpeedStatus.md) | Status of the function block |
 | diagnosticsId | `WORD` | Return values of communication errors (ReadData and WriteData) |

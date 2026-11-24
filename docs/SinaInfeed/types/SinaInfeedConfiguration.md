@@ -1,4 +1,4 @@
-# SinaInfeedConfiguration
+# typeSinaInfeedConfiguration
 
 ## Description
 
