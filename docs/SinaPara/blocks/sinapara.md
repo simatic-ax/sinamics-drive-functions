@@ -40,7 +40,7 @@ A successful write operation ends with a falling edge of the `busy` output and a
 | error | `BOOL` | Error during operation |
 | errorId | `DWORD` | Error information |
 | diagId | `WORD` | Additional communication information |
-| parameter | ARRAY[1..16] OF [SinaParameter](../types/SinaParameter.md#structure) | List of parameters (max. 16 parameter) |
+| parameter | ARRAY[1..16] OF [typeSinaParameter](../types/SinaParameter.md#structure) | List of parameters (max. 16 parameter) |
 
 ## Example
 
@@ -57,7 +57,7 @@ PROGRAM SampleProgram
 
     VAR
       _executeOld : BOOL;
-      _readParameters : ARRAY[1..16] OF SinaParameter;
+      _readParameters : ARRAY[1..16] OF typeSinaParameter;
       _sinaPara: SinaPara;
     END_VAR
 

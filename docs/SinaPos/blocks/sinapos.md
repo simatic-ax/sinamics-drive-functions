@@ -26,7 +26,7 @@ You use the function block `SinaPos` to control the axis via basic positioner te
 | overrideVelocity | `INT` | Velocity override in %, effective from 0% to 199% |
 | overrideAcceleration | `INT` | Acceleration override in %, effective from 0% to 100% |
 | overrideDeceleration | `INT` | Deceleration override in %, effective from 0% to 100% |
-| config | [`SinaPosConfiguration`](../types/SinaPosConfiguration.md#structure) | Configuration for axis |
+| config | [`typeSinaPosConfiguration`](../types/SinaPosConfiguration.md#structure) | Configuration for axis |
 | hwidSTW | `UINT` | Hardware ID of the SIMATIC S7-1200/1500 setpoint slot |
 | hwidZSW | `UINT` | Hardware ID of the SIMATIC S7-1200/1500 actual value slot |
 
@@ -45,8 +45,8 @@ You use the function block `SinaPos` to control the axis via basic positioner te
 | actualPosition | `DINT` | Actual position in LU |
 | actualTraversingBlock | `UINT` | Actual traversing block (0-63) |
 | actualMode | `SinaPosMode` | Actual operating mode |
-| posZSW1 | [`SinaPosZSW1`](../types/SinaPosZSW1.md#structure) | Status of POS_ZSW1 |
-| posZSW2 | [`SinaPosZSW2`](../types/SinaPosZSW2.md#structure) | Status of POS_ZSW2 |
+| posZSW1 | [`typeSinaPosZSW1`](../types/SinaPosZSW1.md#structure) | Status of POS_ZSW1 |
+| posZSW2 | [`typeSinaPosZSW2`](../types/SinaPosZSW2.md#structure) | Status of POS_ZSW2 |
 | actualWarning | `WORD` | Current alarm number |
 | actualFault | `WORD` | Current fault number |
 | error | `BOOL` | TRUE = fault in function block present |
@@ -72,10 +72,10 @@ PROGRAM SampleProgram
   IF _sinaPos.axisEnabled THEN
     // select mode when axis is in standstill
     IF _sinaPos.axisPositionOk THEN
-      _sinaPos.mode := SinaPosMode#RelativePositioning;
+      _sinaPos.mode := SinaPosMode#RELATIVE_POSITIONING;
 
       // check mode is active and execute traversing job
-      IF _sinaPos.actualMode = SinaPosMode#RelativePositioning THEN
+      IF _sinaPos.actualMode = SinaPosMode#RELATIVE_POSITIONING THEN
         _sinaPos.position := 10000;
         _sinaPos.velocity := 500;
         _sinaPos.executeMode := TRUE;

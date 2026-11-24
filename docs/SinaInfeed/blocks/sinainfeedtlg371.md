@@ -21,7 +21,7 @@ With a rising edge at the input`ackFault` the user can acknolwedge pending alarm
 | enablePrecharging | `BOOL` | 0->1 = Setup the DC Link (BLM/SLM/ALM) (OFF1 = 0->1) |
 | enableInfeed | `BOOL` | 1 = Enable line modules  (only SLM / ALM) |
 | ackFault | `BOOL` | 1 = Acknowledge infeed error |
-| config | [`SinaInfeedConfiguration`](../types/SinaInfeedConfiguration.md#structure) | Configuration of axis |
+| config | [`typeSinaInfeedConfiguration`](../types/SinaInfeedConfiguration.md#structure) | Configuration of axis |
 | PZD2in | `WORD` | User defined PZD2 |
 | PZD3in | `WORD` | User defined PZD3 |
 | PZD4in | `WORD` | User defined PZD4 |
@@ -40,7 +40,7 @@ With a rising edge at the input`ackFault` the user can acknolwedge pending alarm
 | fault | `BOOL` | 1 = Infeed error active |
 | lockout | `BOOL` | 1 = Infeed lockout active |
 | warning | `BOOL` | 1 = Infeed warning active |
-| ZSW1 | [`SinaInfeedZSW1`](../types/SinaInfeedZSW1.md#structure) | Infeed Status |
+| ZSW1 | [`typeSinaInfeedZSW1`](../types/SinaInfeedZSW1.md#structure) | Infeed Status |
 | actCurrent | `REAL` | Actual current in Aeff |
 | warnCode | `UINT` | Warning code of drive |
 | faultCode | `UINT` | Fault code of drive |
@@ -59,11 +59,11 @@ PROGRAM SampleProgram
     VAR_EXTERNAL
       infeedTelegram371: UINT;
     END_VAR
-  
+
     VAR
         _sinaInfeed : SinaInfeedTlg371;
     END_VAR
-  
+
     // enable pre-charging
     _sinaInfeed.enablePrecharging := TRUE;
 
@@ -76,7 +76,7 @@ PROGRAM SampleProgram
     IF _sinaInfeed.ready AND NOT _sinaInfeed.lockout THEN
         _sinaInfeed.enableInfeed := TRUE;
     END_IF;
- 
+
     // call sina infeed cyclically
     _sinaInfeed(hwidSTW := infeedTelegram371, hwidZSW := infeedTelegram371);
 END_PROGRAM

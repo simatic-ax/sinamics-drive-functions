@@ -21,7 +21,7 @@ With a rising edge at the input`ackFault` the user can acknolwedge pending alarm
 | enablePrecharging | `BOOL` | 0->1 = Setup the DC Link (BLM/SLM/ALM) (OFF1 = 0->1) |
 | enableInfeed | `BOOL` | 1 = Enable line modules  (only SLM / ALM) |
 | ackFault | `BOOL` | 1 = Acknowledge infeed error |
-| config | [`SinaInfeedConfiguration`](../types/SinaInfeedConfiguration.md#structure) | Configuration of axis |
+| config | [`typeSinaInfeedConfiguration`](../types/SinaInfeedConfiguration.md#structure) | Configuration of axis |
 | hwidSTW | `UINT` | Hardware ID of the SIMATIC S7-1200/1500 setpoint slot |
 | hwidZSW | `UINT` | Hardware ID of the SIMATIC S7-1200/1500 actual value slot |
 
@@ -35,7 +35,7 @@ With a rising edge at the input`ackFault` the user can acknolwedge pending alarm
 | fault | `BOOL` | 1 = Infeed error active |
 | lockout | `BOOL` | 1 = Infeed lockout active |
 | warning | `BOOL` | 1 = Infeed warning active |
-| ZSW1 | [`SinaInfeedZSW1`](../types/SinaInfeedZSW1.md#structure) | Infeed Status |
+| ZSW1 | [`typeSinaInfeedZSW1`](../types/SinaInfeedZSW1.md#structure) | Infeed Status |
 | error | `BOOL` | Rising edge informs that an error occurred during the execution of the function block |
 | status | `WORD` | Status output (7002 = FB in operation; 8xxx = error description  - read the manual) |
 | diagID | `WORD` | Error codes of the cyclic system funtion blocks ReadData / WriteData |

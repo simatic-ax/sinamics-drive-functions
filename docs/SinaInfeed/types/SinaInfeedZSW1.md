@@ -1,4 +1,4 @@
-# SinaInfeedZSW1
+# typeSinaInfeedZSW1
 
 ## Description
 

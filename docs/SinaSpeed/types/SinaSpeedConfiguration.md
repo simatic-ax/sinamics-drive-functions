@@ -1,4 +1,4 @@
-# SinaSpeedConfiguration
+# typeSinaSpeedConfiguration
 
 ## Description
 
